@@ -70,7 +70,7 @@ client.on(`message`, (msg)  => {
         const host = userArgs[0];
         const user = userArgs[1];
         const password = userArgs[2];
-       /* if((host || user || password) == undefined){msg.channel.send('User input : undefined'); return}*/
+        if((host || user || password) == undefined){msg.channel.send('User input : undefined'); return}
         console.log(host, user, password)
         console.log(greenBright('Inside the system'))
         commandInput(msg, host, user, password)
