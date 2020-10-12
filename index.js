@@ -80,9 +80,9 @@ client.on(`message`, (msg)  => {
 
 function commandInput(msg, host, user, password){
     ssh = new SSH({
-        host: '10.6.128.190',
-        user: 'usuario',
-        pass: 'julio2011'
+        host: host,
+        user: user,
+        pass: password
     });
     const filter = m => m.author.id === msg.author.id;
     const collector = msg.channel.createMessageCollector(filter, {max: 1})
